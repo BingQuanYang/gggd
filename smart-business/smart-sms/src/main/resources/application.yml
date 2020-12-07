@@ -1,0 +1,14 @@
+ali:
+  sms:
+    access-key-id: ""
+    access-key-secret: ""
+    domain: "dysmsapi.aliyuncs.com"
+    region-id: "cn-hangzhou"
+    sign-name: "ABC商城"
+    template-code: "SMS_200186855"
+    version: "2017-05-25"
+    action: "SendSms"
+
+
+
+

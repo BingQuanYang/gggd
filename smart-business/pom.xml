@@ -14,9 +14,8 @@
     <name>smart-business</name>
     <modules>
         <module>smart-member</module>
+        <module>smart-sms</module>
     </modules>
-
-
     <build>
         <plugins>
             <plugin>

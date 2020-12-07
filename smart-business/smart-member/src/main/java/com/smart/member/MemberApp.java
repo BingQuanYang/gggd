@@ -10,9 +10,9 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * 设计权限系统
  * spring boot + shiro
  * spring cloud security oath2认证
- *
  */
-@SpringBootApplication
+
+@SpringBootApplication(scanBasePackages = {"com.smart"})
 public class MemberApp {
     public static void main(String[] args) {
         SpringApplication.run(MemberApp.class, args);

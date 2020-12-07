@@ -7,3 +7,9 @@ spring:
       url: ""
       username: root
       password: root
+    # topic
+
+rocketmq:
+  name-server: 10.3.133.161:9876
+  producer:
+    group: member-group
