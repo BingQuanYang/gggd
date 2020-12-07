@@ -1,0 +1,24 @@
+spring:
+  datasource:
+    # 数据库连接池
+    type: com.alibaba.druid.pool.DruidDataSource
+    druid:
+      #  最大连接池数量
+      max-active: 20
+      # 初始化连接池的数量
+      initial-size: 5
+      # 最小连接池 数量
+      min-idle: 2
+      # 这里建议配置为TRUE，防止取到的连接不可用
+      test-on-borrow: true
+      test-on-return: false
+      # 验证连接有效与否的SQL，不同的数据配置不同
+      validation-query: select
+      #通过别名的方式配置扩展插件，常用的插件有：
+      #监控统计用的filter:stat日志用的filter:log4j防御sql注入的filter:wall
+      filters: stat,slf4j,wall
+      #  配置获取连接等待超时的时间 单位毫秒
+      max-wait: 6000
+# mybatis 配置
+mybatis-plus:
+  mapper-locations: classpath*:mapper/*.xml

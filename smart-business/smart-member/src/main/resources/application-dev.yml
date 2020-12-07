@@ -1,0 +1,9 @@
+server:
+  port: 7810
+
+spring:
+  datasource:
+    druid:
+      url: ""
+      username: root
+      password: root
