@@ -6,7 +6,9 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Primary;
 
-
+/**
+ * 通配符
+ */
 @Configuration
 @MapperScan("com.smart.**.mapper")
 public class MybatisPlusConfig {

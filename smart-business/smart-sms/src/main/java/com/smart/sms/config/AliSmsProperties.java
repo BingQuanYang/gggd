@@ -2,10 +2,10 @@ package com.smart.sms.config;
 
 import lombok.Data;
 import org.springframework.boot.context.properties.ConfigurationProperties;
-import org.springframework.context.annotation.Configuration;
+import org.springframework.stereotype.Component;
 
 @Data
-@Configuration
+@Component
 @ConfigurationProperties("ali.sms")
 public class AliSmsProperties {
     /**
@@ -39,5 +39,9 @@ public class AliSmsProperties {
 
     private String action;
 
-
+    public static final String SIGN_NAME = "SignName";
+    public static final String REGION_ID = "RegionId";
+    public static final String TEMPLATE_CODE = "SignName";
+    public static final String PHONE_NUMBERS = "SignName";
+    public static final String TEMPLATE_PARAM = "TemplateParam";
 }

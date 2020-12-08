@@ -1,4 +1,4 @@
 spring:
   profiles:
-    active: @profile.active@
+    active: "@profile.active@"
     include: db

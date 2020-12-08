@@ -4,10 +4,9 @@ server:
 spring:
   datasource:
     druid:
-      url: ""
+      url: jdbc:mysql://114.215.196.38:3306/business_member?useUnicode=true&characterEncoding=utf8&serverTimezone=Asia/Shanghai&useSSL=false
       username: root
       password: root
-    # topic
 
 rocketmq:
   name-server: 10.3.133.161:9876

@@ -1,8 +1,7 @@
 package com.smart.member.service.impl;
 
+import com.smart.member.callback.DefaultSendCallback;
 import com.smart.member.service.MemberService;
-import org.apache.rocketmq.client.producer.SendCallback;
-import org.apache.rocketmq.client.producer.SendResult;
 import org.apache.rocketmq.spring.core.RocketMQTemplate;
 import org.springframework.stereotype.Service;
 
@@ -26,17 +25,7 @@ public class MemberServiceImpl implements MemberService {
      */
     @Override
     public String getVerifyCode(String phone) {
-        mqTemplate.asyncSend("member-sms-topic", phone, new SendCallback() {
-            @Override
-            public void onSuccess(SendResult sendResult) {
-
-            }
-
-            @Override
-            public void onException(Throwable throwable) {
-
-            }
-        });
+        mqTemplate.asyncSend("member-sms-topic", phone, new DefaultSendCallback());
         return "success";
     }
 }

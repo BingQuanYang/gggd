@@ -1,6 +1,7 @@
 package com.smart.member.controller;
 
 import com.smart.member.service.MemberService;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -18,6 +19,7 @@ public class MemberController {
      * @param phone
      * @return
      */
+    @GetMapping("/code")
     public String getVerifyCode(String phone) {
         String verifyCode = memberService.getVerifyCode(phone);
         return verifyCode;
