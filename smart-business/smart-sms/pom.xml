@@ -21,14 +21,15 @@
         <dependency>
             <groupId>com.smart</groupId>
             <artifactId>smart-rocketmq-server</artifactId>
-            <version>0.0.1-SNAPSHOT</version>
         </dependency>
         <!--阿里云短信核心包-->
-
         <dependency>
             <groupId>com.aliyun</groupId>
             <artifactId>aliyun-java-sdk-core</artifactId>
-            <version>4.5.3</version>
+        </dependency>
+        <dependency>
+            <groupId>com.smart</groupId>
+            <artifactId>redis-spring-boot-starter</artifactId>
         </dependency>
     </dependencies>
 

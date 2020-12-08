@@ -1,0 +1,15 @@
+server:
+  port: 6800
+spring:
+  redis:
+    # 16 个数据  0-15
+    database: 2
+    host: 114.215.196.38
+    port: 6379
+    password: ""
+    jedis:
+      pool:
+        max-active: 8
+        max-idle: 6
+        max-wait: -1
+        min-idle: 0

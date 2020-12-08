@@ -26,6 +26,7 @@ public class MemberController {
     }
 
     /**
+     *
      * @param phone
      * @param code
      * @return

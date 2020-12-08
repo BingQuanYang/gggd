@@ -13,6 +13,10 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <spring-boot.version>2.1.17.RELEASE</spring-boot.version>
+        <aliyun-sms.version>4.5.3</aliyun-sms.version>
+        <!-- ======       自定义    ======-->
+        <redis-starter.version>0.0.1-SNAPSHOT</redis-starter.version>
+        <smart-rocketmq.version>0.0.1-SNAPSHOT</smart-rocketmq.version>
     </properties>
     <modules>
         <module>smart-business</module>
@@ -44,12 +48,31 @@
 
     <dependencyManagement>
         <dependencies>
+
             <dependency>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-dependencies</artifactId>
                 <version>${spring-boot.version}</version>
                 <type>pom</type>
                 <scope>import</scope>
+            </dependency>
+            <dependency>
+                <groupId>com.aliyun</groupId>
+                <artifactId>aliyun-java-sdk-core</artifactId>
+                <version>${aliyun-sms.version}</version>
+            </dependency>
+
+            <!--            自定义相关-->
+            <dependency>
+                <groupId>com.smart</groupId>
+                <artifactId>redis-spring-boot-starter</artifactId>
+                <version>${redis-starter.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.smart</groupId>
+                <artifactId>smart-rocketmq-server</artifactId>
+                <version>${smart-rocketmq.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>

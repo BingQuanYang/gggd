@@ -16,5 +16,6 @@
     <modules>
         <module>db-spring-boot-starter</module>
         <module>smart-rocketmq-server</module>
+        <module>redis-spring-boot-starter</module>
     </modules>
 </project>

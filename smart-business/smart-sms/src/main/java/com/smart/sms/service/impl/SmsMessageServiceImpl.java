@@ -7,6 +7,7 @@ import com.aliyuncs.IAcsClient;
 import com.aliyuncs.exceptions.ClientException;
 import com.aliyuncs.http.MethodType;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.smart.redis.service.RedisService;
 import com.smart.sms.config.AliSmsProperties;
 import com.smart.sms.dto.SmsResponseDto;
 import com.smart.sms.service.SmsMessageService;
@@ -14,6 +15,7 @@ import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
 import java.io.IOException;
+import java.util.concurrent.TimeUnit;
 
 
 @Service
@@ -24,7 +26,8 @@ public class SmsMessageServiceImpl implements SmsMessageService {
     IAcsClient client;
     @Resource
     ObjectMapper objectMapper;
-
+    @Resource
+    RedisService redisService;
 
     @Override
     public void sendMsgByPhone(String phone) {
@@ -41,6 +44,7 @@ public class SmsMessageServiceImpl implements SmsMessageService {
             SmsResponseDto smsResponseDto = objectMapper.readValue(data, SmsResponseDto.class);
             if (smsResponseDto != null && SmsResponseDto.SMS_RESPONSE_CODE_OK.equals(smsResponseDto.getCode())) {
                 //讲验证码存入redis中
+                redisService.setEx("sms:phone:" + phone, code, 60, TimeUnit.SECONDS);
             }
         } catch (ClientException | IOException e) {
             e.printStackTrace();
