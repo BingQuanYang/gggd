@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.smart.db.mapper.StoreMapper">
+  <resultMap id="BaseResultMap" type="com.smart.db.entity.Store">
+    <!--@mbg.generated-->
+    <!--@Table tb_store-->
+    <id column="store_id" jdbcType="BIGINT" property="storeId" />
+    <result column="quantity" jdbcType="INTEGER" property="quantity" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    <!--@mbg.generated-->
+    store_id, quantity
+  </sql>
+</mapper>
