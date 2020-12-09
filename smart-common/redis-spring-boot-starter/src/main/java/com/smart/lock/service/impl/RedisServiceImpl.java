@@ -1,6 +1,6 @@
-package com.smart.redis.service.impl;
+package com.smart.lock.service.impl;
 
-import com.smart.redis.service.RedisService;
+import com.smart.lock.service.RedisService;
 import org.springframework.data.redis.connection.DataType;
 import org.springframework.data.redis.core.*;
 import org.springframework.stereotype.Service;

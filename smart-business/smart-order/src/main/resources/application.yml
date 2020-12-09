@@ -1,0 +1,16 @@
+spring:
+  profiles:
+    include: db
+    active: @profile.active@
+  application:
+    name: order-server
+  redis:
+    redisson:
+      # 建议固定名字
+      config: classpath:redisson.yml
+
+feign:
+  okhttp:
+    enabled: true
+  httpclient:
+    enabled: false

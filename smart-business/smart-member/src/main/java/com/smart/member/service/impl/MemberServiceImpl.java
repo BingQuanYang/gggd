@@ -2,7 +2,7 @@ package com.smart.member.service.impl;
 
 import com.smart.member.callback.DefaultSendCallback;
 import com.smart.member.service.MemberService;
-import com.smart.redis.service.RedisService;
+import com.smart.lock.service.RedisService;
 import org.apache.rocketmq.spring.core.RocketMQTemplate;
 import org.springframework.stereotype.Service;
 import org.springframework.util.StringUtils;

@@ -1,4 +1,4 @@
-package com.smart.redis.utils;
+package com.smart.lock.utils;
 
 /**
  * 常用键生产策略

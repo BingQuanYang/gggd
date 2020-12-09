@@ -7,7 +7,7 @@ import com.aliyuncs.IAcsClient;
 import com.aliyuncs.exceptions.ClientException;
 import com.aliyuncs.http.MethodType;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.smart.redis.service.RedisService;
+import com.smart.lock.service.RedisService;
 import com.smart.sms.config.AliSmsProperties;
 import com.smart.sms.dto.SmsResponseDto;
 import com.smart.sms.service.SmsMessageService;

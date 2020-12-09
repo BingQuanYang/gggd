@@ -1,4 +1,4 @@
-package com.smart.redis.service;
+package com.smart.lock.service;
 
 import org.springframework.data.redis.connection.DataType;
 import org.springframework.data.redis.core.Cursor;

@@ -1,4 +1,4 @@
-package com.smart.redis.config;
+package com.smart.lock.config;
 
 
 import com.fasterxml.jackson.annotation.JsonAutoDetect;

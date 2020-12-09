@@ -12,11 +12,19 @@
         <java.version>1.8</java.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-        <spring-boot.version>2.1.17.RELEASE</spring-boot.version>
+
         <aliyun-sms.version>4.5.3</aliyun-sms.version>
+
+        <redissson-starter.version>3.11.6</redissson-starter.version>
         <!-- ======       自定义    ======-->
         <redis-starter.version>0.0.1-SNAPSHOT</redis-starter.version>
         <smart-rocketmq.version>0.0.1-SNAPSHOT</smart-rocketmq.version>
+        <commons-starter.version>0.0.1-SNAPSHOT</commons-starter.version>
+        <db-starter.version>0.0.1-SNAPSHOT</db-starter.version>
+        <!--        微服务相关-->
+        <spring-boot.version>2.2.5.RELEASE</spring-boot.version>
+        <spring.cloud-version>Hoxton.SR3</spring.cloud-version>
+        <spring-cloud-alibaba.version>2.2.1.RELEASE</spring-cloud-alibaba.version>
     </properties>
     <modules>
         <module>smart-business</module>
@@ -48,7 +56,6 @@
 
     <dependencyManagement>
         <dependencies>
-
             <dependency>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-dependencies</artifactId>
@@ -60,6 +67,11 @@
                 <groupId>com.aliyun</groupId>
                 <artifactId>aliyun-java-sdk-core</artifactId>
                 <version>${aliyun-sms.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.redisson</groupId>
+                <artifactId>redisson-spring-boot-starter</artifactId>
+                <version>${redissson-starter.version}</version>
             </dependency>
 
             <!--            自定义相关-->
@@ -74,8 +86,34 @@
                 <artifactId>smart-rocketmq-server</artifactId>
                 <version>${smart-rocketmq.version}</version>
             </dependency>
+            <dependency>
+                <groupId>com.smart</groupId>
+                <artifactId>commons-spring-boot-starter</artifactId>
+                <version>${commons-starter.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.smart</groupId>
+                <artifactId>db-spring-boot-starter</artifactId>
+                <version>${db-starter.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-dependencies</artifactId>
+                <version>${spring.cloud-version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+            <dependency>
+                <groupId>com.alibaba.cloud</groupId>
+                <artifactId>spring-cloud-alibaba-dependencies</artifactId>
+                <version>2.2.1.RELEASE</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
         </dependencies>
     </dependencyManagement>
+
 
     <profiles>
         <profile>

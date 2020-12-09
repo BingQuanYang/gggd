@@ -1,0 +1,7 @@
+server:
+  port: "端口"
+spring:
+  cloud:
+    nacos:
+      discovery:
+        server-addr: "修改成生产的ip地址"
