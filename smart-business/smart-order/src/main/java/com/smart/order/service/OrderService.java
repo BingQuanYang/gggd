@@ -3,5 +3,5 @@ package com.smart.order.service;
 import com.smart.commons.exception.BizException;
 
 public interface OrderService {
-    String createOrder() throws BizException;
+    String createOrder() throws BizException, InterruptedException;
 }

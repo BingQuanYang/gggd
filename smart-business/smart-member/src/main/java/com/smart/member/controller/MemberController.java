@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RestController;
 import javax.annotation.Resource;
 
 @RestController
-@RequestMapping("/memeber")
+@RequestMapping("/member")
 public class MemberController {
     @Resource
     MemberService memberService;
@@ -26,7 +26,6 @@ public class MemberController {
     }
 
     /**
-     *
      * @param phone
      * @param code
      * @return

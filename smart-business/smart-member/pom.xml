@@ -24,6 +24,10 @@
         </dependency>
         <dependency>
             <groupId>com.smart</groupId>
+            <artifactId>lock-spring-boot-starter</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.smart</groupId>
             <artifactId>smart-rocketmq-server</artifactId>
             <version>0.0.1-SNAPSHOT</version>
         </dependency>

@@ -1,6 +1,5 @@
 package com.smart.order.controller;
 
-import com.smart.commons.exception.BizException;
 import com.smart.commons.result.ResponseResult;
 import com.smart.order.service.OrderService;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -16,7 +15,7 @@ public class OrderController {
     OrderService orderService;
 
     @PostMapping("/create")
-    public ResponseResult<String> createOrder() throws BizException {
+    public ResponseResult<String> createOrder() throws Exception {
         return ResponseResult.success(orderService.createOrder());
     }
 }
