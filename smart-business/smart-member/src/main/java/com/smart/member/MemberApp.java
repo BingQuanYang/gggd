@@ -2,6 +2,8 @@ package com.smart.member;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
+import org.springframework.cloud.openfeign.EnableFeignClients;
 
 /**
  * 文件服务
@@ -11,7 +13,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * spring boot + shiro
  * spring cloud security oath2认证
  */
-
+@EnableDiscoveryClient
+@EnableFeignClients
 @SpringBootApplication(scanBasePackages = {"com.smart"})
 public class MemberApp {
     public static void main(String[] args) {

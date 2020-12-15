@@ -1,35 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
     <parent>
         <groupId>com.smart</groupId>
-        <artifactId>smart-business</artifactId>
+        <artifactId>smart-cloud-parent</artifactId>
         <version>0.0.1-SNAPSHOT</version>
         <relativePath>../pom.xml</relativePath>
     </parent>
-    <modelVersion>4.0.0</modelVersion>
-    <artifactId>smart-member</artifactId>
+    <artifactId>smart-auth</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>smart-member</name>
-    <description>Demo project for Spring Boot</description>
+    <name>smart-auth</name>
     <dependencies>
         <dependency>
-            <groupId>com.smart</groupId>
-            <artifactId>db-spring-boot-starter</artifactId>
-            <version>0.0.1-SNAPSHOT</version>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-web</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>com.smart</groupId>
-            <artifactId>smart-rocketmq-server</artifactId>
-            <version>0.0.1-SNAPSHOT</version>
-        </dependency>
-        <dependency>
-            <groupId>com.smart</groupId>
-            <artifactId>redis-spring-boot-starter</artifactId>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-security</artifactId>
         </dependency>
         <dependency>
             <groupId>com.alibaba.cloud</groupId>
@@ -43,14 +28,19 @@
             <groupId>io.github.openfeign</groupId>
             <artifactId>feign-okhttp</artifactId>
         </dependency>
+
         <dependency>
             <groupId>com.smart</groupId>
             <artifactId>commons-spring-boot-starter</artifactId>
         </dependency>
-    </dependencies>
 
+        <dependency>
+            <groupId>io.jsonwebtoken</groupId>
+            <artifactId>jjwt</artifactId>
+            <version>0.9.1</version>
+        </dependency>
+    </dependencies>
     <build>
-        <!--重要 如果不设置resource 会导致application.yaml中的@@找不到pom文件中的配置-->
         <resources>
             <resource>
                 <directory>src/main/resources</directory>

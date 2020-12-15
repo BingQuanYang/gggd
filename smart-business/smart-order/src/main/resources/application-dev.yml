@@ -4,7 +4,7 @@ server:
 spring:
   datasource:
     druid:
-      url: jdbc:mysql://114.215.196.38:3306/business_order?useUnicode=true&characterEncoding=utf8&serverTimezone=Asia/Shanghai&useSSL=false
+      url: jdbc:mysql://10.3.133.159:3306/business_order?useUnicode=true&characterEncoding=utf8&serverTimezone=Asia/Shanghai&useSSL=false
       username: root
       password: root
   cloud:

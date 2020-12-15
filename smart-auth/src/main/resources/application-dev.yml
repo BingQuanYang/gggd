@@ -1,0 +1,17 @@
+server:
+  port: 8818
+  #  调用会员服务  :8810/member/login---->
+  # feign
+#  认证服务:  8818/login
+spring:
+  cloud:
+    nacos:
+      discovery:
+        server-addr: "10.3.133.160:8848"
+        namespace: "e0501816-b0fd-452c-9c38-7c3482cb7a48"
+
+feign:
+  httpclient:
+    enabled: false
+  okhttp:
+    enabled: true

@@ -1,9 +1,15 @@
 package com.smart.member.service.impl;
 
+import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
+import com.smart.commons.result.ResponseResult;
+import com.smart.db.entity.Member;
+import com.smart.db.mapper.MemberMapper;
 import com.smart.member.callback.DefaultSendCallback;
+import com.smart.member.dto.MemberDto;
 import com.smart.member.service.MemberService;
 import com.smart.lock.service.RedisService;
 import org.apache.rocketmq.spring.core.RocketMQTemplate;
+import org.springframework.beans.BeanUtils;
 import org.springframework.stereotype.Service;
 import org.springframework.util.StringUtils;
 
@@ -18,6 +24,8 @@ public class MemberServiceImpl implements MemberService {
     RocketMQTemplate mqTemplate;
     @Resource
     RedisService redisService;
+    @Resource
+    MemberMapper memberMapper;
 
 
     /**
@@ -42,11 +50,21 @@ public class MemberServiceImpl implements MemberService {
     @Override
     public String login(String phone, String code) {
         String verifyCode = (String) redisService.get("sms:phone:" + phone);
-        if (!StringUtils.isEmpty(verifyCode) && verifyCode.equals(code)){
+        if (!StringUtils.isEmpty(verifyCode) && verifyCode.equals(code)) {
 
-        }else {
+        } else {
 
         }
         return null;
     }
+
+    @Override
+    public ResponseResult<MemberDto> findMemeberByName(String username) {
+        Member member = memberMapper.selectOne(new QueryWrapper<Member>().eq(Member.COL_USERNAME, username));
+        MemberDto memberDto = new MemberDto();
+        BeanUtils.copyProperties(member, memberDto);
+        return ResponseResult.success(memberDto);
+    }
+
+
 }

@@ -1,0 +1,17 @@
+server:
+  port: 8818
+  #  调用会员服务  :8810/member/login---->
+  # feign
+#  认证服务:  8818/login
+
+
+spring:
+  profiles:
+    active: @profile.active@
+  application:
+    name: "smart-auth"
+
+jwt:
+  secret: 1231123132131321321
+  expire: 1000
+

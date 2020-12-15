@@ -1,4 +1,6 @@
 spring:
   profiles:
     active: "@profile.active@"
-    include: db
+    include: db,redis
+  application:
+    name: smart-member

@@ -29,6 +29,7 @@
     <modules>
         <module>smart-business</module>
         <module>smart-common</module>
+        <module>smart-auth</module>
     </modules>
 
     <dependencies>

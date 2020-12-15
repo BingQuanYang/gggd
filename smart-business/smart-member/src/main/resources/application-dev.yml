@@ -1,5 +1,5 @@
 server:
-  port: 7810
+  port: 8810
 
 spring:
   datasource:
@@ -7,8 +7,20 @@ spring:
       url: jdbc:mysql://114.215.196.38:3306/business_member?useUnicode=true&characterEncoding=utf8&serverTimezone=Asia/Shanghai&useSSL=false
       username: root
       password: root
+  cloud:
+    nacos:
+      discovery:
+        server-addr: "10.3.133.160:8848"
+        namespace: "e0501816-b0fd-452c-9c38-7c3482cb7a48"
 
 rocketmq:
   name-server: 10.3.133.161:9876
   producer:
     group: member-group
+
+
+feign:
+  httpclient:
+    enabled: false
+  okhttp:
+    enabled: true
