@@ -13,6 +13,13 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 
 import javax.annotation.Resource;
 
+/**
+ *
+ * AuthorizationServerConfigurerAdapter
+ * WebSecurityConfigurerAdapter
+ *
+ * 认证的配置
+ */
 @Configuration
 public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     @Resource
