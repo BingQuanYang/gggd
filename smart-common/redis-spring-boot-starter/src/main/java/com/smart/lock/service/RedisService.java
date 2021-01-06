@@ -13,7 +13,7 @@ import java.util.concurrent.TimeUnit;
  * set
  * RedisService操作工具类
  *
- * @author zhangwei
+ * @author ybq
  */
 public interface RedisService {
 
